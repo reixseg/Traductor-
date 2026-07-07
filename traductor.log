@@ -1,0 +1,81 @@
+2026-06-30 11:26:11,638 | OCR listo
+2026-06-30 11:26:28,816 | OCR bloques=19 parrafos=1 traducciones=0
+2026-06-30 11:26:44,856 | OCR bloques=19 parrafos=1 traducciones=0
+2026-06-30 11:27:07,605 | OCR bloques=32 parrafos=2 traducciones=2
+2026-06-30 11:27:39,846 | OCR bloques=38 parrafos=1 traducciones=1
+2026-06-30 11:28:08,110 | OCR bloques=27 parrafos=1 traducciones=1
+2026-06-30 11:28:30,805 | OCR bloques=17 parrafos=1 traducciones=1
+2026-06-30 11:29:54,533 | OCR bloques=26 parrafos=1 traducciones=1
+2026-06-30 11:30:18,213 | OCR bloques=24 parrafos=1 traducciones=1
+2026-06-30 11:30:53,178 | OCR bloques=21 parrafos=1 traducciones=0
+2026-06-30 11:31:30,143 | OCR bloques=103 parrafos=1 traducciones=1
+2026-06-30 11:32:10,397 | OCR listo
+2026-06-30 11:32:10,612 | Guardada captura debug_captura_ocr.png region=MonitorInfo(index=1, left=40, top=90, width=1480, height=880)
+2026-06-30 11:32:50,453 | ciclo=1 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:32:50,453 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:32:51,078 | Guardada captura debug_captura_ocr.png region=MonitorInfo(index=1, left=40, top=90, width=1480, height=880)
+2026-06-30 11:33:06,884 | ciclo=2 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:33:06,884 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:33:23,991 | ciclo=3 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:33:23,991 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:33:41,387 | ciclo=4 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:33:41,388 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:33:58,711 | ciclo=5 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:33:58,712 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:34:15,151 | ciclo=6 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:34:15,152 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:34:30,724 | ciclo=7 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:34:30,725 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:34:54,332 | ciclo=8 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:34:54,333 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:35:22,069 | ciclo=9 bloques=30 lineas=27 traducciones=18
+2026-06-30 11:35:22,069 | ejemplo=Ella decidió mantener la cabeza en alto
+2026-06-30 11:37:55,729 | Aplicacion iniciada
+2026-06-30 11:37:55,870 | Panel creado en 10,10 400x700
+2026-06-30 11:38:01,016 | OCR listo
+2026-06-30 11:38:01,092 | Guardada captura debug_captura_ocr.png region=MonitorInfo(index=1, left=430, top=90, width=1470, height=880)
+2026-06-30 11:38:10,508 | ciclo=1 bloques=22 lineas=10 traducciones=2
+2026-06-30 11:38:10,508 | ejemplo=antalla compLeta
+2026-06-30 11:38:11,096 | Guardada captura debug_captura_ocr.png region=MonitorInfo(index=1, left=430, top=90, width=1470, height=880)
+2026-06-30 11:38:37,335 | ciclo=2 bloques=33 lineas=26 traducciones=18
+2026-06-30 11:38:37,335 | ejemplo=Word a PDF
+2026-06-30 11:38:55,145 | ciclo=3 bloques=14 lineas=11 traducciones=11
+2026-06-30 11:38:55,145 | ejemplo=La mujer ideal de Tobias, y ahí era donde la había llevado.
+2026-06-30 11:39:20,434 | ciclo=4 bloques=28 lineas=26 traducciones=18
+2026-06-30 11:39:20,434 | ejemplo=Rompiendo el compromiso
+2026-06-30 11:39:41,174 | ciclo=5 bloques=24 lineas=23 traducciones=18
+2026-06-30 11:39:41,174 | ejemplo=Fusionar y dividir archivos PDF 1
+2026-06-30 11:40:29,050 | ciclo=6 bloques=14 lineas=7 traducciones=5
+2026-06-30 11:40:29,050 | ejemplo=Dalia en flor - C_X
+2026-06-30 11:43:13,884 | Aplicacion iniciada
+2026-06-30 11:43:14,030 | Panel creado en 10,10 400x700
+2026-06-30 11:44:09,175 | OCR listo idiomas=('en', 'fr', 'de', 'it', 'pt')
+2026-06-30 11:44:27,692 | ciclo=1 bloques=22 lineas=19 traducciones=19 tiempo=18.5s
+2026-06-30 11:44:39,424 | ciclo=2 bloques=23 lineas=20 traducciones=20 tiempo=11.6s
+2026-06-30 11:44:45,487 | ciclo=3 bloques=23 lineas=20 traducciones=20 tiempo=5.9s
+2026-06-30 11:44:54,098 | ciclo=13 bloques=25 lineas=20 traducciones=20 tiempo=6.6s
+2026-06-30 11:45:08,044 | ciclo=25 bloques=28 lineas=22 traducciones=22 tiempo=11.6s
+2026-06-30 11:45:25,546 | ciclo=26 bloques=20 lineas=19 traducciones=19 tiempo=17.4s
+2026-06-30 11:45:33,601 | ciclo=36 bloques=20 lineas=19 traducciones=19 tiempo=6.1s
+2026-06-30 11:49:36,878 | Aplicacion iniciada
+2026-06-30 11:49:37,019 | Overlay creado 1920x1020 en 0,0
+2026-06-30 11:49:42,447 | OCR listo idiomas=('en', 'fr', 'de', 'it', 'pt')
+2026-06-30 11:50:11,418 | ciclo=1 bloques=18 lineas=17 traducciones=17 tiempo=29.0s
+2026-06-30 11:50:26,716 | ciclo=2 bloques=22 lineas=19 traducciones=4 tiempo=15.1s
+2026-06-30 11:50:42,821 | ciclo=3 bloques=21 lineas=17 traducciones=13 tiempo=16.0s
+2026-06-30 11:51:06,332 | ciclo=4 bloques=21 lineas=20 traducciones=20 tiempo=23.4s
+2026-06-30 12:02:39,727 | Aplicacion iniciada
+2026-06-30 12:02:39,913 | Overlay creado 1920x1020 en 0,0
+2026-06-30 12:02:41,211 | OCR RapidOCR listo
+2026-06-30 12:03:01,123 | Aplicacion iniciada
+2026-06-30 12:03:01,315 | Overlay creado 1920x1020 en 0,0
+2026-06-30 12:03:02,809 | OCR RapidOCR listo
+2026-06-30 12:03:39,725 | ciclo=1 bloques=86 lineas=59 traducciones=15 tiempo=36.9s
+2026-06-30 12:09:36,985 | Aplicacion iniciada
+2026-06-30 12:09:37,192 | Overlay creado 1920x1020 en 0,0
+2026-06-30 12:09:39,025 | OCR RapidOCR listo
+2026-06-30 12:09:54,100 | ciclo=1 bloques=35 lineas=32 traducciones=10 tiempo=15.1s
+2026-06-30 12:10:10,155 | ciclo=2 bloques=20 lineas=19 traducciones=13 tiempo=16.0s
+2026-06-30 12:10:30,212 | ciclo=3 bloques=24 lineas=22 traducciones=16 tiempo=20.0s
+2026-06-30 12:10:56,236 | ciclo=4 bloques=21 lineas=20 traducciones=16 tiempo=25.9s
+2026-06-30 12:11:14,567 | ciclo=5 bloques=32 lineas=30 traducciones=12 tiempo=18.2s
