@@ -7,6 +7,7 @@ from __future__ import annotations
 import ctypes
 import queue
 import sys
+import threading
 import time
 import traceback
 import warnings
@@ -29,7 +30,7 @@ from tray import TrayController
 from worker import TranslationWorker, WorkerResult
 
 
-def _show_startup_notice() -> None:
+def _show_startup_notice_blocking() -> None:
     if not CONFIG.show_startup_notice:
         return
     try:
@@ -41,10 +42,15 @@ def _show_startup_notice() -> None:
             "Icono azul en la bandeja (junto al reloj) para pausar o salir.\n"
             "Consejo: no uses pantalla completa.",
             "Traductor en vivo",
-            0x40,
+            0x40040,  # icono de información + siempre al frente
         )
     except Exception:
         pass
+
+
+def _show_startup_notice() -> None:
+    """El aviso es modal: se muestra en otro hilo para no bloquear la interfaz."""
+    threading.Thread(target=_show_startup_notice_blocking, daemon=True).start()
 
 
 class LiveScreenTranslatorApp:
@@ -71,6 +77,14 @@ class LiveScreenTranslatorApp:
         )
         LOGGER.info("Overlay creado %sx%s en %s,%s", monitor.width, monitor.height, monitor.left, monitor.top)
 
+    def _open_settings_window(self) -> None:
+        try:
+            from settings import SettingsWindow
+
+            threading.Thread(target=lambda: SettingsWindow().run(), daemon=True).start()
+        except Exception:
+            LOGGER.exception("No se pudo abrir la ventana de configuración")
+
     def _on_quit(self) -> None:
         self._running = False
         self._worker.stop()
@@ -96,17 +110,19 @@ class LiveScreenTranslatorApp:
             if not self._overlay:
                 continue
 
-            if result.translations:
-                self._last_labels_result = result
-                self._overlay.update_from_blocks(result.blocks, result.translations)
+            self._last_labels_result = result
+            self._overlay.update_from_blocks(result.blocks, result.translations)
 
     def _tick(self) -> None:
-        self._poll_results()
+        try:
+            self._poll_results()
 
-        now = time.time()
-        if self._overlay and now - self._last_raise >= CONFIG.raise_interval_sec:
-            self._overlay.raise_to_front()
-            self._last_raise = now
+            now = time.time()
+            if self._overlay and now - self._last_raise >= CONFIG.raise_interval_sec:
+                self._overlay.raise_to_front()
+                self._last_raise = now
+        except Exception:
+            LOGGER.exception("Error en el ciclo de la interfaz")
 
         if self._running and self._overlay:
             self._overlay.schedule(self._tick)
@@ -119,6 +135,7 @@ class LiveScreenTranslatorApp:
                 on_pause=self._worker.pause,
                 on_resume=self._worker.resume,
                 on_clear_cache=self._worker.clear_cache,
+                on_open_settings=self._open_settings_window,
                 on_quit=self._on_quit,
             )
             self._tray.run_in_background()

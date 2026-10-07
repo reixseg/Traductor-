@@ -79,3 +79,54 @@
 2026-06-30 12:10:30,212 | ciclo=3 bloques=24 lineas=22 traducciones=16 tiempo=20.0s
 2026-06-30 12:10:56,236 | ciclo=4 bloques=21 lineas=20 traducciones=16 tiempo=25.9s
 2026-06-30 12:11:14,567 | ciclo=5 bloques=32 lineas=30 traducciones=12 tiempo=18.2s
+2026-07-07 17:18:46,992 | INFO | Aplicacion iniciada
+2026-07-07 17:18:48,605 | INFO | Overlay creado 1920x1020 en 0,0
+2026-07-07 17:18:50,644 | INFO | OCR RapidOCR listo
+2026-07-07 17:19:00,328 | INFO | ciclo=1 bloques=25 lineas=25 traducciones=3 tiempo=9.7s
+2026-07-07 17:19:55,257 | INFO | ciclo=335 bloques=25 lineas=25 traducciones=3 tiempo=3.0s
+2026-07-07 17:19:58,918 | INFO | ciclo=336 bloques=25 lineas=25 traducciones=3 tiempo=3.6s
+2026-07-07 17:20:14,305 | INFO | ciclo=337 bloques=14 lineas=14 traducciones=3 tiempo=15.3s
+2026-07-07 17:20:36,288 | INFO | Configuración guardada desde la ventana
+2026-07-07 17:20:40,630 | INFO | ciclo=338 bloques=21 lineas=20 traducciones=16 tiempo=22.4s
+2026-10-07 17:14:31,325 | INFO | Aplicacion iniciada
+2026-10-07 17:14:32,369 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:14:32,369 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 17:14:35,070 | INFO | OCR RapidOCR listo
+2026-10-07 17:14:57,728 | INFO | ciclo=1 bloques=48 lineas=28 traducciones=0 tiempo=22.7s
+2026-10-07 17:15:39,373 | INFO | ciclo=2 bloques=137 lineas=129 traducciones=0 tiempo=41.5s
+2026-10-07 17:16:01,995 | INFO | ciclo=3 bloques=26 lineas=20 traducciones=0 tiempo=22.5s
+2026-10-07 17:16:41,052 | INFO | ciclo=4 bloques=73 lineas=55 traducciones=0 tiempo=39.0s
+2026-10-07 17:17:01,216 | INFO | ciclo=5 bloques=40 lineas=22 traducciones=0 tiempo=20.1s
+2026-10-07 17:17:30,404 | INFO | ciclo=6 bloques=62 lineas=59 traducciones=0 tiempo=29.1s
+2026-10-07 17:17:55,332 | INFO | ciclo=7 bloques=46 lineas=39 traducciones=0 tiempo=24.8s
+2026-10-07 17:18:17,466 | INFO | ciclo=8 bloques=38 lineas=28 traducciones=0 tiempo=22.0s
+2026-10-07 17:18:38,990 | INFO | ciclo=9 bloques=40 lineas=29 traducciones=0 tiempo=21.4s
+2026-10-07 17:19:04,046 | INFO | ciclo=10 bloques=52 lineas=45 traducciones=0 tiempo=25.0s
+2026-10-07 17:19:26,585 | INFO | ciclo=11 bloques=40 lineas=35 traducciones=0 tiempo=22.4s
+2026-10-07 17:19:54,157 | INFO | Aplicacion iniciada
+2026-10-07 17:19:54,292 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:19:54,292 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 17:19:55,786 | INFO | OCR RapidOCR listo
+2026-10-07 17:20:18,995 | INFO | ciclo=1 bloques=49 lineas=39 traducciones=0 tiempo=23.2s
+2026-10-07 17:20:39,296 | INFO | ciclo=2 bloques=21 lineas=17 traducciones=0 tiempo=20.2s
+2026-10-07 17:21:09,543 | INFO | ciclo=3 bloques=54 lineas=49 traducciones=0 tiempo=30.1s
+2026-10-07 17:21:39,306 | INFO | ciclo=4 bloques=89 lineas=62 traducciones=0 tiempo=29.7s
+2026-10-07 17:22:15,313 | INFO | ciclo=5 bloques=68 lineas=45 traducciones=0 tiempo=35.9s
+2026-10-07 17:22:53,522 | INFO | ciclo=6 bloques=48 lineas=42 traducciones=0 tiempo=38.1s
+2026-10-07 17:23:38,667 | INFO | ciclo=7 bloques=93 lineas=67 traducciones=0 tiempo=45.0s
+2026-10-07 17:24:21,696 | INFO | ciclo=8 bloques=48 lineas=42 traducciones=0 tiempo=42.9s
+2026-10-07 17:25:25,923 | INFO | ciclo=9 bloques=94 lineas=86 traducciones=0 tiempo=64.1s
+2026-10-07 17:26:04,499 | INFO | ciclo=10 bloques=47 lineas=41 traducciones=0 tiempo=38.5s
+2026-10-07 17:48:19,308 | INFO | Aplicacion iniciada
+2026-10-07 17:48:19,414 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:48:19,421 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 17:48:19,951 | ERROR | Error en worker: No module named 'argostranslate'
+Traceback (most recent call last):
+  File "C:\Users\gerab\Videos\Traductor\worker.py", line 99, in _run
+    translator = TextTranslator()
+  File "C:\Users\gerab\Videos\Traductor\translate.py", line 19, in __init__
+    import argostranslate.package as argos_package
+ModuleNotFoundError: No module named 'argostranslate'
+2026-10-07 17:53:01,934 | INFO | Aplicacion iniciada
+2026-10-07 17:53:03,309 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:53:03,310 | INFO | Overlay creado 1920x1020 en 0,0

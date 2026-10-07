@@ -61,7 +61,10 @@ class TranslationWorker:
     def clear_cache(self) -> None:
         self._command_queue.put(WorkerCommand.CLEAR_CACHE)
 
-    def _drain_commands(self, capture: ScreenCapture, translator: TextTranslator) -> bool:
+    def _status(self, message: str) -> None:
+        self._result_queue.put(WorkerResult(blocks=[], translations={}, status=message))
+
+    def _drain_commands(self, translator: TextTranslator) -> bool:
         while True:
             try:
                 cmd = self._command_queue.get_nowait()
@@ -77,33 +80,33 @@ class TranslationWorker:
             elif cmd == WorkerCommand.CLEAR_CACHE:
                 translator.clear_cache()
                 self._last_fingerprint = None
-                self._result_queue.put(WorkerResult(blocks=[], translations={}, status="Caché limpiada"))
+                self._last_good_result = None
+                self._status("Caché limpiada")
 
         return True
 
     def _run(self) -> None:
         capture = ScreenCapture()
-        translator = TextTranslator()
+        translator: TextTranslator | None = None
         ocr: OcrEngine | None = None
         cycle = 0
 
         try:
-            self._result_queue.put(
-                WorkerResult(blocks=[], translations={}, status="Esperando inicio del OCR...")
-            )
+            self._status("Esperando inicio del OCR...")
             time.sleep(CONFIG.ocr_startup_delay)
 
-            self._result_queue.put(
-                WorkerResult(blocks=[], translations={}, status="Inicializando OCR (primera vez puede tardar)...")
-            )
+            self._status("Cargando traducción offline (la primera vez descarga el idioma)...")
+            translator = TextTranslator()
+            translator.warmup()
+            LOGGER.info("Traductor Argos listo")
+
+            self._status("Inicializando OCR (primera vez puede tardar)...")
             ocr = OcrEngine()
             LOGGER.info("OCR RapidOCR listo")
-            self._result_queue.put(
-                WorkerResult(blocks=[], translations={}, status="Activo — detectando idiomas en pantalla...")
-            )
+            self._status("Activo — detectando idiomas en pantalla...")
 
             while self._running:
-                if not self._drain_commands(capture, translator):
+                if not self._drain_commands(translator):
                     break
 
                 if self._paused:
@@ -122,21 +125,29 @@ class TranslationWorker:
                         continue
                     self._last_fingerprint = fp
 
+                ocr_started = time.perf_counter()
                 raw_blocks = ocr.detect(image, offset_x=region.left, offset_y=region.top)
+                ocr_time = time.perf_counter() - ocr_started
+
                 lines = pick_readable_lines(raw_blocks, CONFIG.min_line_length)
                 texts = [line.text for line in lines[: CONFIG.max_lines_per_cycle]]
+
+                translate_started = time.perf_counter()
                 translations = translator.translate_many(texts)
+                translate_time = time.perf_counter() - translate_started
 
                 unique_translations = dedupe_preserve_order(translations.values())
                 elapsed = time.perf_counter() - started
 
                 LOGGER.info(
-                    "ciclo=%s bloques=%s lineas=%s traducciones=%s tiempo=%.1fs",
+                    "ciclo=%s bloques=%s lineas=%s traducciones=%s tiempo=%.1fs (ocr=%.1fs trad=%.1fs)",
                     cycle,
                     len(raw_blocks),
                     len(lines),
                     len(unique_translations),
                     elapsed,
+                    ocr_time,
+                    translate_time,
                 )
 
                 if translations:
@@ -148,41 +159,27 @@ class TranslationWorker:
                     )
                     self._last_good_result = result
                     self._result_queue.put(result)
-                elif lines:
-                    self._result_queue.put(
-                        WorkerResult(
-                            blocks=[],
-                            translations={},
-                            status=f"OCR: {len(lines)} línea(s) ya en español o filtradas",
-                        )
-                    )
-                elif raw_blocks:
-                    self._result_queue.put(
-                        WorkerResult(
-                            blocks=[],
-                            translations={},
-                            status=f"OCR: {len(raw_blocks)} fragmento(s) detectados",
-                        )
-                    )
                 else:
-                    self._result_queue.put(
-                        WorkerResult(
-                            blocks=[],
-                            translations={},
-                            status="Sin texto legible en pantalla",
-                        )
-                    )
+                    # Sin traducciones: no reutilizar un resultado viejo.
+                    self._last_good_result = None
+                    if translator.last_error:
+                        self._status(f"Error de traducción: {translator.last_error}")
+                    elif lines:
+                        self._status(f"OCR: {len(lines)} línea(s) ya en español o sin cambios")
+                    elif raw_blocks:
+                        self._status(f"OCR: {len(raw_blocks)} fragmento(s) detectados")
+                    else:
+                        self._status("Sin texto legible en pantalla")
 
                 sleep_for = max(CONFIG.min_sleep_after_cycle, CONFIG.capture_interval - elapsed)
                 time.sleep(sleep_for)
 
         except Exception as exc:
             LOGGER.exception("Error en worker: %s", exc)
-            self._result_queue.put(
-                WorkerResult(blocks=[], translations={}, status=f"Error: {exc}")
-            )
+            self._status(f"Error: {exc}")
         finally:
-            translator.shutdown()
+            if translator:
+                translator.shutdown()
             capture.close()
             self._running = False
             self._result_queue.put(None)

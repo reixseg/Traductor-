@@ -1,4 +1,4 @@
-"""Registro de actividad en archivo."""
+"""Registro de actividad en archivo y consola."""
 
 from __future__ import annotations
 
@@ -14,9 +14,15 @@ def setup_logging() -> logging.Logger:
         return logger
 
     logger.setLevel(logging.INFO)
-    handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
-    handler.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
-    logger.addHandler(handler)
+    formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
+
+    file_handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+    logger.addHandler(stream_handler)
     return logger
 
 

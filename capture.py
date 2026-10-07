@@ -5,7 +5,7 @@ from __future__ import annotations
 import ctypes
 from dataclasses import dataclass
 
-import mss
+import mss # type: ignore
 from PIL import Image
 
 
@@ -75,18 +75,49 @@ class ScreenCapture:
         )
         return clip_to_work_area(full)
 
-    def grab_primary(self) -> tuple[Image.Image, MonitorInfo]:
-        monitor = self.get_monitor()
-        shot = self._sct.grab(
-            {
+    def _get_capture_box(self, monitor: MonitorInfo) -> dict[str, int]:
+        from config import CONFIG
+
+        capture_region = CONFIG.capture_region or {}
+        if not capture_region.get("enabled"):
+            return {
                 "left": monitor.left,
                 "top": monitor.top,
                 "width": monitor.width,
                 "height": monitor.height,
             }
+
+        left = int(capture_region.get("left", 0))
+        top = int(capture_region.get("top", 0))
+        width = int(capture_region.get("width", monitor.width))
+        height = int(capture_region.get("height", monitor.height))
+        return {
+            "left": monitor.left + left,
+            "top": monitor.top + top,
+            "width": max(1, min(width, monitor.width - left)),
+            "height": max(1, min(height, monitor.height - top)),
+        }
+
+    def grab_primary(self) -> tuple[Image.Image, MonitorInfo]:
+        monitor = self.get_monitor()
+        box = self._get_capture_box(monitor)
+        shot = self._sct.grab(
+            {
+                "left": box["left"],
+                "top": box["top"],
+                "width": box["width"],
+                "height": box["height"],
+            }
         )
         image = Image.frombytes("RGB", shot.size, shot.bgra, "raw", "BGRX")
-        return image, monitor
+        region = MonitorInfo(
+            index=monitor.index,
+            left=box["left"],
+            top=box["top"],
+            width=box["width"],
+            height=box["height"],
+        )
+        return image, region
 
     def grab_content(self) -> tuple[Image.Image, MonitorInfo]:
         """Captura la zona de lectura (sin barra de tareas ni menús superiores)."""

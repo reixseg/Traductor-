@@ -25,11 +25,13 @@ class TrayController:
         on_pause: Callable[[], None],
         on_resume: Callable[[], None],
         on_clear_cache: Callable[[], None],
+        on_open_settings: Callable[[], None],
         on_quit: Callable[[], None],
     ) -> None:
         self._on_pause = on_pause
         self._on_resume = on_resume
         self._on_clear_cache = on_clear_cache
+        self._on_open_settings = on_open_settings
         self._on_quit = on_quit
         self._icon: Icon | None = None
         self._paused = False
@@ -54,6 +56,7 @@ class TrayController:
     def run_in_background(self) -> None:
         menu = Menu(
             MenuItem("Pausar / Reanudar", self._toggle_pause, default=True),
+            MenuItem("Configuración", lambda *_: self._on_open_settings()),
             MenuItem("Limpiar caché de traducción", lambda *_: self._on_clear_cache()),
             Menu.SEPARATOR,
             MenuItem("Salir", self._quit),

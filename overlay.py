@@ -1,8 +1,10 @@
-"""Overlay superpuesto estilo subtítulo (sin cajas blancas)."""
+"""Overlay superpuesto: cubre el texto original con su traducción."""
 
 from __future__ import annotations
 
+import ctypes
 import tkinter as tk
+from ctypes import wintypes
 from dataclasses import dataclass
 
 import win32api
@@ -10,7 +12,11 @@ import win32con
 import win32gui
 
 from config import CONFIG
+from logger import LOGGER
 from ocr import TextBlock
+
+# Windows 10 versión 2004 (build 19041) o superior.
+WDA_EXCLUDEFROMCAPTURE = 0x00000011
 
 
 @dataclass(frozen=True)
@@ -41,19 +47,30 @@ class TranslationOverlay:
             self._root,
             width=width,
             height=height,
-            bg="black",
+            bg="black",  # color transparente: NO usarlo en cajas ni texto
             highlightthickness=0,
             bd=0,
         )
         self._canvas.pack(fill="both", expand=True)
 
         self._visible = False
-        self._font = ("Segoe UI", CONFIG.overlay_font_size)
+        self._last_labels: list[OverlayLabel] | None = None
+
         self._root.update_idletasks()
         self._apply_window_styles()
+        self._exclude_from_capture()
 
+    # ------------------------------------------------------------------
+    # Ventana
+    # ------------------------------------------------------------------
     def _hwnd(self) -> int:
         return self._root.winfo_id()
+
+    def _toplevel_hwnd(self) -> int:
+        """Tk devuelve el HWND interno; las APIs de afinidad necesitan el de nivel superior."""
+        inner = self._hwnd()
+        parent = win32gui.GetParent(inner)
+        return parent or inner
 
     def _apply_window_styles(self) -> None:
         hwnd = self._hwnd()
@@ -64,10 +81,27 @@ class TranslationOverlay:
         win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, style)
         win32gui.SetLayeredWindowAttributes(hwnd, win32api.RGB(0, 0, 0), 0, win32con.LWA_COLORKEY)
 
+    def _exclude_from_capture(self) -> None:
+        """Hace que el overlay sea invisible para mss/OCR (evita leer nuestra propia traducción)."""
+        try:
+            func = ctypes.windll.user32.SetWindowDisplayAffinity
+            func.argtypes = [wintypes.HWND, wintypes.DWORD]
+            func.restype = wintypes.BOOL
+            ok = func(self._toplevel_hwnd(), WDA_EXCLUDEFROMCAPTURE)
+            if ok:
+                LOGGER.info("Overlay excluido de la captura de pantalla")
+            else:
+                LOGGER.warning(
+                    "No se pudo excluir el overlay de la captura (error=%s). "
+                    "Requiere Windows 10 build 19041 o superior.",
+                    win32api.GetLastError(),
+                )
+        except Exception:
+            LOGGER.exception("Error al excluir el overlay de la captura")
+
     def _raise_above_apps(self) -> None:
-        hwnd = self._hwnd()
         win32gui.SetWindowPos(
-            hwnd,
+            self._hwnd(),
             win32con.HWND_TOPMOST,
             self._left,
             self._top,
@@ -75,13 +109,14 @@ class TranslationOverlay:
             self._height,
             win32con.SWP_NOACTIVATE | win32con.SWP_SHOWWINDOW,
         )
-        self._apply_window_styles()
 
     def show(self) -> None:
         if not self._visible:
             self._root.deiconify()
             self._visible = True
-        self._root.update_idletasks()
+            self._root.update_idletasks()
+            self._apply_window_styles()
+            self._exclude_from_capture()
         self._raise_above_apps()
 
     def hide(self) -> None:
@@ -92,89 +127,130 @@ class TranslationOverlay:
     def clear(self) -> None:
         self._canvas.delete("all")
 
-    def _draw_subtitle(self, x: int, y: int, text: str, max_width: int) -> None:
-        """Texto con contorno suave, sin caja blanca."""
-        wrap_w = min(max_width + 40, CONFIG.overlay_max_width)
-        outline = CONFIG.overlay_outline_color
-        fill = CONFIG.overlay_text_color
+    # ------------------------------------------------------------------
+    # Dibujo
+    # ------------------------------------------------------------------
+    def _draw_label(self, label: OverlayLabel) -> None:
+        """Dibuja la traducción sobre un rectángulo sólido que tapa el texto original."""
+        x = label.x - self._left
+        y = label.y - self._top
 
-        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-            self._canvas.create_text(
-                x + dx,
-                y + dy,
-                text=text,
-                anchor="nw",
-                fill=outline,
-                font=self._font,
-                width=wrap_w,
-            )
+        if x < -80 or y < -80 or x > self._width + 80 or y > self._height + 80:
+            return
 
-        self._canvas.create_text(
+        pad = getattr(CONFIG, "overlay_bg_padding", 3)
+        bg_color = getattr(CONFIG, "overlay_bg_color", "#1E293B")
+        wrap_w = max(60, label.width + 8)
+
+        # Tamaño de letra proporcional al texto original (en píxeles, por eso negativo).
+        px = max(CONFIG.overlay_font_size, min(int(label.height * 0.75), 28))
+        font = ("Segoe UI", -px)
+
+        text_id = self._canvas.create_text(
             x,
             y,
-            text=text,
+            text=label.text,
             anchor="nw",
-            fill=fill,
-            font=self._font,
+            fill=CONFIG.overlay_text_color,
+            font=font,
             width=wrap_w,
         )
 
-    def _group_labels(self, blocks: list[TextBlock], translations: dict[str, str]) -> list[OverlayLabel]:
-        """Agrupa palabras de la misma línea en una sola frase."""
-        band = CONFIG.overlay_line_group_px
-        rows: dict[int, list[tuple[TextBlock, str]]] = {}
+        bbox = self._canvas.bbox(text_id)
+        if not bbox:
+            return
+        tx1, ty1, tx2, ty2 = bbox
 
-        for block in blocks:
+        # El fondo cubre el texto original Y todo lo que ocupe la traducción.
+        x1 = min(x, tx1) - pad
+        y1 = min(y, ty1) - pad
+        x2 = max(x + label.width, tx2) + pad
+        y2 = max(y + label.height, ty2) + pad
+
+        rect_id = self._canvas.create_rectangle(
+            x1, y1, x2, y2, fill=bg_color, outline=""
+        )
+        self._canvas.tag_lower(rect_id, text_id)
+
+    def _group_labels(self, blocks: list[TextBlock], translations: dict[str, str]) -> list[OverlayLabel]:
+        """Une fragmentos de la misma línea, pero separa columnas distintas."""
+        items: list[tuple[TextBlock, str]] = []
+        for block in sorted(blocks, key=lambda b: (b.y, b.x)):
             translated = translations.get(block.text)
-            if not translated:
-                continue
-            key = block.y // band
-            rows.setdefault(key, []).append((block, translated))
+            if translated:
+                items.append((block, translated))
+
+        groups: list[list[tuple[TextBlock, str]]] = []
+        for block, tr in items:
+            center = block.y + block.height / 2
+            placed = False
+            for group in groups:
+                ref = group[0][0]
+                ref_center = ref.y + ref.height / 2
+                if abs(center - ref_center) > max(6, ref.height * 0.5):
+                    continue  # no está en la misma línea
+
+                max_gap = max(30, int(block.height * 2))
+                near = any(
+                    block.x <= m.x + m.width + max_gap and block.x + block.width >= m.x - max_gap
+                    for m, _ in group
+                )
+                if near:
+                    group.append((block, tr))
+                    placed = True
+                    break
+            if not placed:
+                groups.append([(block, tr)])
 
         labels: list[OverlayLabel] = []
-        for items in sorted(rows.values(), key=lambda row: row[0][0].y):
-            items.sort(key=lambda item: item[0].x)
-            first = items[0][0]
+        for group in sorted(groups, key=lambda g: (min(b.y for b, _ in g), min(b.x for b, _ in g))):
+            group.sort(key=lambda item: item[0].x)
+
             parts: list[str] = []
-            for block, tr in items:
+            for _, tr in group:
                 if not parts or parts[-1] != tr:
                     parts.append(tr)
 
-            combined = " ".join(parts)
-            right = max(b.x + b.width for b, _ in items)
-            bottom = max(b.y + b.height for b, _ in items)
+            left = min(b.x for b, _ in group)
+            top = min(b.y for b, _ in group)
+            right = max(b.x + b.width for b, _ in group)
+            bottom = max(b.y + b.height for b, _ in group)
+
             labels.append(
                 OverlayLabel(
-                    x=first.x,
-                    y=first.y,
-                    text=combined,
-                    width=max(1, right - first.x),
-                    height=max(1, bottom - first.y),
+                    x=left,
+                    y=top,
+                    text=" ".join(parts),
+                    width=max(1, right - left),
+                    height=max(1, bottom - top),
                 )
             )
         return labels
 
     def render(self, labels: list[OverlayLabel]) -> None:
+        visible = labels[: CONFIG.max_overlay_blocks]
+
+        # Evita repintar (y parpadear) cuando el contenido no cambió.
+        if self._last_labels is not None and visible == self._last_labels:
+            return
+        self._last_labels = visible
+
         self.clear()
-        if not labels:
+        if not visible:
             if CONFIG.hide_when_empty:
                 self.hide()
             return
 
         self.show()
-        for label in labels[: CONFIG.max_overlay_blocks]:
-            x = label.x - self._left
-            y = label.y - self._top
-
-            if x < -80 or y < -80 or x > self._width + 80 or y > self._height + 80:
-                continue
-
-            self._draw_subtitle(x, y, label.text, label.width)
+        for label in visible:
+            self._draw_label(label)
 
     def update_from_blocks(self, blocks: list[TextBlock], translations: dict[str, str]) -> None:
-        labels = self._group_labels(blocks, translations)
-        self.render(labels)
+        self.render(self._group_labels(blocks, translations))
 
+    # ------------------------------------------------------------------
+    # Ciclo de vida
+    # ------------------------------------------------------------------
     def schedule(self, callback) -> None:
         self._root.after(CONFIG.ui_poll_ms, callback)
 
@@ -188,4 +264,5 @@ class TranslationOverlay:
         self._root.destroy()
 
     def raise_to_front(self) -> None:
-        self._raise_above_apps()
+        if self._visible:
+            self._raise_above_apps()

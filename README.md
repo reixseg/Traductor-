@@ -8,18 +8,19 @@ La versión actual ya incluye:
 
 - Captura de pantalla continua del área de trabajo de Windows.
 - OCR con RapidOCR para detectar texto legible en la imagen.
-- Traducción automática a español mediante Google Translate.
+- Traducción automática a español **offline** con Argos Translate (sin Google; solo necesita internet la primera vez para descargar el idioma).
 - Superposición transparente sobre la pantalla, con comportamiento click-through para no interrumpir el uso de otras ventanas o juegos.
 - Bucle en segundo plano que procesa captura → OCR → traducción.
-- Icono en la bandeja del sistema con opciones para pausar/reanudar, limpiar caché y salir.
+- Icono en la bandeja del sistema con opciones para pausar/reanudar, limpiar caché, abrir configuración y salir.
 - Caché de traducciones y filtrado de texto para reducir repeticiones y mejorar rendimiento.
-- Configuración centralizada en config.py.
+- Configuración centralizada en config.py, con guardado persistente y ventana de ajustes rápida.
+- Soporte para elegir idioma origen/destino y definir una región de captura específica.
 
 ## Requisitos
 
 - Windows 10/11
 - Python 3.10 o superior
-- Conexión a internet
+- Conexión a internet solo la primera vez (descarga de los modelos de idioma de Argos)
 - Paquetes listados en requirements.txt
 
 ## Instalación rápida
@@ -64,12 +65,16 @@ Puedes ajustar el comportamiento desde config.py.
 | click_through | Permite que los clics pasen a través del overlay | True |
 | hide_when_empty | Oculta el overlay si no hay texto visible | True |
 | raise_interval_sec | Frecuencia con la que el overlay vuelve al frente | 1.5 |
+| overlay_bg_color | Color del fondo que tapa el texto original | #1E293B |
+| argos_source_languages | Idiomas de origen a instalar y detectar (ej. ["en", "fr"]) | ["en"] |
+| argos_auto_install | Descargar automáticamente los paquetes de idioma que falten | True |
 
 ## Limitaciones actuales
 
 - Está pensado para Windows y usa APIs específicas de Windows.
 - La calidad depende del tamaño, contraste y legibilidad del texto en pantalla.
-- Requiere internet para traducir.
+- Después de la primera descarga de idiomas funciona sin internet.
+- La traducción offline es menos fina que la de Google y traduce línea por línea, sin contexto.
 - El rendimiento puede variar según la potencia de la CPU y la cantidad de texto visible.
 
 ## Estructura del proyecto
@@ -79,7 +84,7 @@ Puedes ajustar el comportamiento desde config.py.
 ├── config.py        # Configuración central
 ├── capture.py       # Captura de pantalla
 ├── ocr.py           # Motor OCR
-├── translate.py     # Traducción automática
+├── translate.py     # Traducción offline (Argos Translate)
 ├── overlay.py       # Ventana superpuesta transparente
 ├── worker.py        # Lógica de procesamiento en segundo plano
 ├── tray.py          # Icono de bandeja del sistema
