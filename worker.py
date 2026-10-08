@@ -223,7 +223,12 @@ class TranslationWorker:
                     translate_time,
                 )
 
-          
+                # La pantalla cambió mientras procesábamos: este resultado ya es viejo.
+                if self._screen_changed:
+                    LOGGER.info("ciclo=%s descartado: la pantalla cambió durante el proceso", cycle)
+                    self._last_thumb = None
+                    self._last_good_result = None
+                    continue
 
                 if translations:
                     translated_blocks = [b for b in paragraphs if b.text in translations]
