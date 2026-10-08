@@ -25,9 +25,14 @@ class AppConfig:
     translate_batch_size: int = 20
     skip_unchanged_screen: bool = True
 
-    max_lines_per_cycle: int = 16
+    max_lines_per_cycle: int = 80
     min_line_length: int = 6
     min_text_length: int = 3
+    paragraph_mode: bool = True
+    overlay_match_background: bool = True  # el cartel imita el color de fondo del documento
+    change_threshold: float = 1.0  # sensibilidad al cambio de pantalla (menor = más sensible)
+    stable_wait_max: float = 1.5  # espera máxima a que termine un scroll / cambio de página
+    stable_check_interval: float = 0.12
 
     overlay_font_size: int = 12
     panel_font_size: int = 11
@@ -36,7 +41,7 @@ class AppConfig:
     overlay_bg_color: str = "#1E293B"
     overlay_bg_padding: int = 3
     overlay_max_width: int = 520
-    max_overlay_blocks: int = 20
+    max_overlay_blocks: int = 40
     overlay_line_group_px: int = 14
     click_through: bool = True
     hide_when_empty: bool = True

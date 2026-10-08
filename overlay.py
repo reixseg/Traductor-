@@ -26,6 +26,10 @@ class OverlayLabel:
     text: str
     width: int
     height: int
+    line_height: int = 0
+    lines: int = 1
+    bg: str = ""
+    fg: str = ""
 
 
 class TranslationOverlay:
@@ -42,6 +46,7 @@ class TranslationOverlay:
 
         self._root.geometry(f"{width}x{height}+{monitor_left}+{monitor_top}")
         self._root.attributes("-transparentcolor", "black")
+        self._root.attributes("-topmost", True)
 
         self._canvas = tk.Canvas(
             self._root,
@@ -64,13 +69,16 @@ class TranslationOverlay:
     # Ventana
     # ------------------------------------------------------------------
     def _hwnd(self) -> int:
-        return self._root.winfo_id()
+        """HWND de nivel superior.
+
+        Tk devuelve el HWND interno; estilos, TOPMOST y afinidad de captura
+        solo funcionan sobre la ventana de nivel superior (su padre).
+        """
+        inner = self._root.winfo_id()
+        return win32gui.GetParent(inner) or inner
 
     def _toplevel_hwnd(self) -> int:
-        """Tk devuelve el HWND interno; las APIs de afinidad necesitan el de nivel superior."""
-        inner = self._hwnd()
-        parent = win32gui.GetParent(inner)
-        return parent or inner
+        return self._hwnd()
 
     def _apply_window_styles(self) -> None:
         hwnd = self._hwnd()
@@ -139,24 +147,34 @@ class TranslationOverlay:
             return
 
         pad = getattr(CONFIG, "overlay_bg_padding", 3)
-        bg_color = getattr(CONFIG, "overlay_bg_color", "#1E293B")
+        bg_color = label.bg or getattr(CONFIG, "overlay_bg_color", "#1E293B")
+        fg_color = label.fg or CONFIG.overlay_text_color
         wrap_w = max(60, label.width + 8)
 
-        # Tamaño de letra proporcional al texto original (en píxeles, por eso negativo).
-        px = max(CONFIG.overlay_font_size, min(int(label.height * 0.75), 28))
-        font = ("Segoe UI", -px)
+        # Tamaño de letra según UNA línea del original (en píxeles, por eso negativo).
+        line_h = label.line_height or label.height
+        start_px = max(CONFIG.overlay_font_size, min(int(line_h * 0.75), 40))
+        # En párrafos el español ocupa más: se reduce la letra hasta que quepa.
+        min_px = max(9, int(start_px * 0.65)) if label.lines > 1 else start_px
 
-        text_id = self._canvas.create_text(
-            x,
-            y,
-            text=label.text,
-            anchor="nw",
-            fill=CONFIG.overlay_text_color,
-            font=font,
-            width=wrap_w,
-        )
+        text_id = None
+        bbox = None
+        for px in range(start_px, min_px - 1, -1):
+            if text_id is not None:
+                self._canvas.delete(text_id)
+            text_id = self._canvas.create_text(
+                x,
+                y,
+                text=label.text,
+                anchor="nw",
+                fill=fg_color,
+                font=("Segoe UI", -px),
+                width=wrap_w,
+            )
+            bbox = self._canvas.bbox(text_id)
+            if not bbox or (bbox[3] - bbox[1]) <= label.height * 1.05 + pad * 2:
+                break
 
-        bbox = self._canvas.bbox(text_id)
         if not bbox:
             return
         tx1, ty1, tx2, ty2 = bbox
@@ -173,7 +191,7 @@ class TranslationOverlay:
         self._canvas.tag_lower(rect_id, text_id)
 
     def _group_labels(self, blocks: list[TextBlock], translations: dict[str, str]) -> list[OverlayLabel]:
-        """Une fragmentos de la misma línea, pero separa columnas distintas."""
+        """Un cartel por párrafo; los fragmentos sueltos de una misma línea se unen."""
         items: list[tuple[TextBlock, str]] = []
         for block in sorted(blocks, key=lambda b: (b.y, b.x)):
             translated = translations.get(block.text)
@@ -182,23 +200,26 @@ class TranslationOverlay:
 
         groups: list[list[tuple[TextBlock, str]]] = []
         for block, tr in items:
-            center = block.y + block.height / 2
             placed = False
-            for group in groups:
-                ref = group[0][0]
-                ref_center = ref.y + ref.height / 2
-                if abs(center - ref_center) > max(6, ref.height * 0.5):
-                    continue  # no está en la misma línea
+            if block.lines <= 1:
+                center = block.y + block.height / 2
+                for group in groups:
+                    ref = group[0][0]
+                    if ref.lines > 1:
+                        continue  # los párrafos nunca se mezclan
+                    ref_center = ref.y + ref.height / 2
+                    if abs(center - ref_center) > max(6, ref.height * 0.5):
+                        continue  # no está en la misma línea
 
-                max_gap = max(30, int(block.height * 2))
-                near = any(
-                    block.x <= m.x + m.width + max_gap and block.x + block.width >= m.x - max_gap
-                    for m, _ in group
-                )
-                if near:
-                    group.append((block, tr))
-                    placed = True
-                    break
+                    max_gap = max(30, int(block.height * 2))
+                    near = any(
+                        block.x <= m.x + m.width + max_gap and block.x + block.width >= m.x - max_gap
+                        for m, _ in group
+                    )
+                    if near:
+                        group.append((block, tr))
+                        placed = True
+                        break
             if not placed:
                 groups.append([(block, tr)])
 
@@ -223,6 +244,10 @@ class TranslationOverlay:
                     text=" ".join(parts),
                     width=max(1, right - left),
                     height=max(1, bottom - top),
+                    line_height=max((b.line_height or b.height) for b, _ in group),
+                    lines=max(b.lines for b, _ in group),
+                    bg=group[0][0].bg,
+                    fg=group[0][0].fg,
                 )
             )
         return labels

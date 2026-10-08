@@ -18,6 +18,10 @@ class TextBlock:
     y: int
     width: int
     height: int
+    line_height: int = 0  # altura de UNA línea (0 = usar height)
+    lines: int = 1  # cuántas líneas contiene (párrafo > 1)
+    bg: str = ""  # color de fondo medido en pantalla (#RRGGBB)
+    fg: str = ""  # color de texto con buen contraste
 
 
 class OcrEngine:

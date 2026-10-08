@@ -130,3 +130,370 @@ ModuleNotFoundError: No module named 'argostranslate'
 2026-10-07 17:53:01,934 | INFO | Aplicacion iniciada
 2026-10-07 17:53:03,309 | INFO | Overlay excluido de la captura de pantalla
 2026-10-07 17:53:03,310 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 17:53:18,524 | INFO | Descargando paquete de idioma Argos: en -> es
+2026-10-07 17:54:26,023 | INFO | Traductor Argos listo
+2026-10-07 17:54:27,413 | INFO | OCR RapidOCR listo
+2026-10-07 17:54:31,820 | INFO | ciclo=1 bloques=41 lineas=26 traducciones=4 tiempo=4.4s (ocr=3.7s trad=0.7s)
+2026-10-07 17:54:31,866 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:54:42,681 | INFO | ciclo=2 bloques=46 lineas=26 traducciones=4 tiempo=10.8s (ocr=10.3s trad=0.4s)
+2026-10-07 17:54:47,210 | INFO | ciclo=3 bloques=49 lineas=27 traducciones=4 tiempo=4.4s (ocr=4.0s trad=0.4s)
+2026-10-07 17:54:49,707 | INFO | ciclo=4 bloques=21 lineas=17 traducciones=3 tiempo=2.4s (ocr=1.6s trad=0.7s)
+2026-10-07 17:55:06,580 | INFO | ciclo=23 bloques=36 lineas=32 traducciones=10 tiempo=13.9s (ocr=12.7s trad=1.1s)
+2026-10-07 17:55:11,242 | INFO | ciclo=24 bloques=44 lineas=37 traducciones=9 tiempo=4.6s (ocr=3.9s trad=0.7s)
+2026-10-07 17:55:15,268 | INFO | ciclo=34 bloques=43 lineas=36 traducciones=10 tiempo=2.5s (ocr=2.2s trad=0.3s)
+2026-10-07 17:55:20,664 | INFO | ciclo=45 bloques=45 lineas=37 traducciones=7 tiempo=3.8s (ocr=3.4s trad=0.3s)
+2026-10-07 17:55:22,698 | INFO | ciclo=46 bloques=43 lineas=36 traducciones=10 tiempo=1.9s (ocr=1.8s trad=0.1s)
+2026-10-07 17:55:26,851 | INFO | ciclo=51 bloques=44 lineas=37 traducciones=11 tiempo=3.4s (ocr=3.1s trad=0.3s)
+2026-10-07 17:55:30,252 | INFO | ciclo=52 bloques=35 lineas=28 traducciones=9 tiempo=3.3s (ocr=2.7s trad=0.5s)
+2026-10-07 17:55:33,292 | INFO | ciclo=53 bloques=41 lineas=33 traducciones=9 tiempo=2.9s (ocr=2.5s trad=0.4s)
+2026-10-07 17:55:36,086 | INFO | ciclo=54 bloques=37 lineas=31 traducciones=10 tiempo=2.7s (ocr=2.4s trad=0.2s)
+2026-10-07 17:55:42,997 | INFO | ciclo=55 bloques=89 lineas=44 traducciones=5 tiempo=6.8s (ocr=6.5s trad=0.3s)
+2026-10-07 17:55:47,199 | INFO | ciclo=56 bloques=41 lineas=35 traducciones=9 tiempo=4.1s (ocr=3.7s trad=0.3s)
+2026-10-07 17:55:58,377 | INFO | ciclo=65 bloques=5 lineas=5 traducciones=1 tiempo=9.8s (ocr=8.2s trad=1.5s)
+2026-10-07 17:56:21,857 | INFO | ciclo=66 bloques=109 lineas=64 traducciones=8 tiempo=23.4s (ocr=22.5s trad=0.8s)
+2026-10-07 17:56:25,487 | INFO | ciclo=67 bloques=35 lineas=28 traducciones=9 tiempo=3.5s (ocr=3.4s trad=0.1s)
+2026-10-07 17:56:31,412 | INFO | ciclo=68 bloques=35 lineas=29 traducciones=11 tiempo=5.8s (ocr=5.3s trad=0.5s)
+2026-10-07 17:56:57,047 | INFO | ciclo=69 bloques=43 lineas=37 traducciones=3 tiempo=25.5s (ocr=22.8s trad=2.6s)
+2026-10-07 17:57:14,473 | INFO | ciclo=70 bloques=46 lineas=40 traducciones=1 tiempo=17.3s (ocr=17.0s trad=0.3s)
+2026-10-07 17:57:17,456 | INFO | ciclo=71 bloques=37 lineas=31 traducciones=10 tiempo=2.9s (ocr=2.7s trad=0.2s)
+2026-10-07 17:57:21,099 | INFO | ciclo=74 bloques=38 lineas=32 traducciones=9 tiempo=3.2s (ocr=3.1s trad=0.1s)
+2026-10-07 17:57:28,966 | INFO | ciclo=75 bloques=37 lineas=31 traducciones=10 tiempo=7.8s (ocr=7.2s trad=0.5s)
+2026-10-07 17:57:48,995 | INFO | ciclo=76 bloques=35 lineas=28 traducciones=4 tiempo=19.9s (ocr=17.7s trad=2.1s)
+2026-10-07 17:58:20,364 | INFO | ciclo=77 bloques=90 lineas=65 traducciones=2 tiempo=31.3s (ocr=30.8s trad=0.4s)
+2026-10-07 17:58:26,306 | INFO | Aplicacion iniciada
+2026-10-07 17:58:26,396 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:58:26,396 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 17:58:32,624 | INFO | Traductor Argos listo
+2026-10-07 17:58:33,424 | INFO | OCR RapidOCR listo
+2026-10-07 17:58:43,121 | INFO | ciclo=1 bloques=39 lineas=26 traducciones=7 tiempo=9.7s (ocr=8.5s trad=1.1s)
+2026-10-07 17:58:43,161 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 17:58:45,533 | INFO | ciclo=2 bloques=21 lineas=17 traducciones=3 tiempo=2.3s (ocr=1.6s trad=0.6s)
+2026-10-07 17:58:48,331 | INFO | ciclo=6 bloques=22 lineas=18 traducciones=6 tiempo=2.2s (ocr=1.7s trad=0.5s)
+2026-10-07 17:58:52,607 | INFO | ciclo=7 bloques=26 lineas=26 traducciones=14 tiempo=4.2s (ocr=3.3s trad=0.8s)
+2026-10-07 17:58:56,346 | INFO | ciclo=8 bloques=26 lineas=26 traducciones=14 tiempo=3.6s (ocr=3.3s trad=0.3s)
+2026-10-07 17:59:11,084 | INFO | ciclo=75 bloques=27 lineas=27 traducciones=15 tiempo=4.0s (ocr=3.7s trad=0.2s)
+2026-10-07 17:59:25,006 | INFO | ciclo=138 bloques=24 lineas=24 traducciones=15 tiempo=3.9s (ocr=3.3s trad=0.5s)
+2026-10-07 17:59:30,073 | INFO | ciclo=139 bloques=23 lineas=23 traducciones=16 tiempo=5.0s (ocr=3.8s trad=1.1s)
+2026-10-07 17:59:34,096 | INFO | ciclo=140 bloques=25 lineas=25 traducciones=16 tiempo=3.9s (ocr=3.5s trad=0.4s)
+2026-10-07 18:00:30,306 | INFO | ciclo=470 bloques=24 lineas=24 traducciones=14 tiempo=3.4s (ocr=2.9s trad=0.5s)
+2026-10-07 18:00:35,153 | INFO | ciclo=471 bloques=25 lineas=24 traducciones=16 tiempo=4.7s (ocr=3.8s trad=0.9s)
+2026-10-07 18:00:40,271 | INFO | ciclo=477 bloques=26 lineas=25 traducciones=16 tiempo=4.2s (ocr=3.9s trad=0.2s)
+2026-10-07 18:00:46,106 | INFO | ciclo=478 bloques=88 lineas=63 traducciones=2 tiempo=5.7s (ocr=4.9s trad=0.8s)
+2026-10-07 18:00:48,371 | INFO | ciclo=479 bloques=17 lineas=12 traducciones=2 tiempo=2.2s (ocr=1.6s trad=0.5s)
+2026-10-07 18:00:50,200 | INFO | ciclo=480 bloques=16 lineas=12 traducciones=2 tiempo=1.7s (ocr=1.6s trad=0.1s)
+2026-10-07 18:00:51,652 | INFO | ciclo=481 bloques=16 lineas=12 traducciones=2 tiempo=1.4s (ocr=1.2s trad=0.1s)
+2026-10-07 18:00:53,093 | INFO | ciclo=482 bloques=16 lineas=12 traducciones=2 tiempo=1.3s (ocr=1.2s trad=0.1s)
+2026-10-07 18:00:54,686 | INFO | ciclo=483 bloques=16 lineas=12 traducciones=2 tiempo=1.5s (ocr=1.4s trad=0.1s)
+2026-10-07 18:00:56,663 | INFO | ciclo=484 bloques=16 lineas=12 traducciones=2 tiempo=1.9s (ocr=1.8s trad=0.1s)
+2026-10-07 18:01:00,223 | INFO | ciclo=485 bloques=45 lineas=36 traducciones=2 tiempo=3.5s (ocr=2.9s trad=0.5s)
+2026-10-07 18:01:03,866 | INFO | ciclo=486 bloques=46 lineas=36 traducciones=2 tiempo=3.5s (ocr=3.1s trad=0.3s)
+2026-10-07 18:01:06,925 | INFO | ciclo=487 bloques=49 lineas=36 traducciones=1 tiempo=3.0s (ocr=2.7s trad=0.2s)
+2026-10-07 18:01:09,225 | INFO | ciclo=488 bloques=46 lineas=35 traducciones=1 tiempo=2.2s (ocr=2.0s trad=0.1s)
+2026-10-07 18:01:11,704 | INFO | ciclo=491 bloques=46 lineas=35 traducciones=2 tiempo=2.1s (ocr=1.9s trad=0.1s)
+2026-10-07 18:01:13,262 | INFO | ciclo=492 bloques=14 lineas=10 traducciones=2 tiempo=1.5s (ocr=1.3s trad=0.0s)
+2026-10-07 18:01:18,267 | INFO | ciclo=493 bloques=49 lineas=37 traducciones=3 tiempo=4.9s (ocr=4.3s trad=0.6s)
+2026-10-07 18:01:22,462 | INFO | ciclo=494 bloques=87 lineas=61 traducciones=2 tiempo=4.1s (ocr=3.9s trad=0.1s)
+2026-10-07 18:01:25,525 | INFO | ciclo=495 bloques=87 lineas=61 traducciones=3 tiempo=3.0s (ocr=2.8s trad=0.1s)
+2026-10-07 18:01:30,319 | INFO | ciclo=496 bloques=93 lineas=69 traducciones=2 tiempo=4.7s (ocr=4.5s trad=0.1s)
+2026-10-07 18:01:35,413 | INFO | ciclo=497 bloques=87 lineas=62 traducciones=2 tiempo=5.0s (ocr=4.8s trad=0.2s)
+2026-10-07 18:01:40,061 | INFO | ciclo=498 bloques=89 lineas=63 traducciones=3 tiempo=4.5s (ocr=4.4s trad=0.1s)
+2026-10-07 18:01:43,070 | INFO | ciclo=499 bloques=89 lineas=63 traducciones=3 tiempo=2.9s (ocr=2.7s trad=0.1s)
+2026-10-07 18:01:47,712 | INFO | ciclo=500 bloques=89 lineas=63 traducciones=2 tiempo=4.5s (ocr=4.4s trad=0.1s)
+2026-10-07 18:01:51,550 | INFO | ciclo=501 bloques=89 lineas=62 traducciones=3 tiempo=3.7s (ocr=3.6s trad=0.1s)
+2026-10-07 18:01:54,145 | INFO | ciclo=502 bloques=89 lineas=62 traducciones=3 tiempo=2.5s (ocr=2.3s trad=0.1s)
+2026-10-07 18:01:56,793 | INFO | ciclo=503 bloques=89 lineas=62 traducciones=3 tiempo=2.5s (ocr=2.4s trad=0.1s)
+2026-10-07 18:02:00,897 | INFO | ciclo=504 bloques=78 lineas=51 traducciones=3 tiempo=4.0s (ocr=3.6s trad=0.3s)
+2026-10-07 18:02:06,993 | INFO | ciclo=505 bloques=107 lineas=63 traducciones=9 tiempo=6.0s (ocr=5.0s trad=1.0s)
+2026-10-07 18:02:11,172 | INFO | ciclo=506 bloques=24 lineas=23 traducciones=16 tiempo=4.1s (ocr=3.6s trad=0.5s)
+2026-10-07 18:02:14,877 | INFO | ciclo=507 bloques=23 lineas=22 traducciones=16 tiempo=3.6s (ocr=3.1s trad=0.4s)
+2026-10-07 18:02:18,540 | INFO | ciclo=516 bloques=24 lineas=23 traducciones=16 tiempo=2.3s (ocr=2.2s trad=0.0s)
+2026-10-07 18:02:22,406 | INFO | ciclo=517 bloques=26 lineas=25 traducciones=16 tiempo=3.8s (ocr=3.7s trad=0.0s)
+2026-10-07 18:02:25,218 | INFO | ciclo=518 bloques=35 lineas=29 traducciones=1 tiempo=2.7s (ocr=2.4s trad=0.3s)
+2026-10-07 18:02:27,819 | INFO | ciclo=519 bloques=35 lineas=30 traducciones=2 tiempo=2.5s (ocr=2.3s trad=0.1s)
+2026-10-07 18:02:29,908 | INFO | ciclo=520 bloques=49 lineas=37 traducciones=3 tiempo=2.0s (ocr=1.8s trad=0.1s)
+2026-10-07 18:02:32,183 | INFO | ciclo=521 bloques=47 lineas=33 traducciones=3 tiempo=2.2s (ocr=1.9s trad=0.2s)
+2026-10-07 18:02:35,383 | INFO | ciclo=522 bloques=45 lineas=39 traducciones=1 tiempo=3.1s (ocr=2.4s trad=0.6s)
+2026-10-07 18:02:38,157 | INFO | ciclo=523 bloques=51 lineas=45 traducciones=3 tiempo=2.7s (ocr=2.2s trad=0.5s)
+2026-10-07 18:02:40,776 | INFO | ciclo=524 bloques=51 lineas=45 traducciones=3 tiempo=2.5s (ocr=2.3s trad=0.1s)
+2026-10-07 18:02:43,923 | INFO | ciclo=525 bloques=50 lineas=45 traducciones=3 tiempo=3.0s (ocr=2.9s trad=0.1s)
+2026-10-07 18:02:47,654 | INFO | ciclo=526 bloques=50 lineas=46 traducciones=3 tiempo=3.6s (ocr=2.8s trad=0.7s)
+2026-10-07 18:02:50,199 | INFO | ciclo=527 bloques=47 lineas=31 traducciones=3 tiempo=2.4s (ocr=2.3s trad=0.1s)
+2026-10-07 18:02:52,388 | INFO | ciclo=528 bloques=34 lineas=29 traducciones=2 tiempo=2.1s (ocr=1.9s trad=0.1s)
+2026-10-07 18:02:58,277 | INFO | ciclo=529 bloques=105 lineas=61 traducciones=7 tiempo=5.8s (ocr=5.2s trad=0.6s)
+2026-10-07 18:03:00,021 | INFO | ciclo=530 bloques=35 lineas=30 traducciones=2 tiempo=1.6s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:01,801 | INFO | ciclo=531 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:03,639 | INFO | ciclo=532 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:05,367 | INFO | ciclo=533 bloques=34 lineas=29 traducciones=2 tiempo=1.6s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:07,167 | INFO | ciclo=534 bloques=34 lineas=29 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:09,013 | INFO | ciclo=535 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.6s trad=0.1s)
+2026-10-07 18:03:10,853 | INFO | ciclo=536 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.2s)
+2026-10-07 18:03:12,591 | INFO | ciclo=537 bloques=35 lineas=30 traducciones=2 tiempo=1.6s (ocr=1.4s trad=0.1s)
+2026-10-07 18:03:14,287 | INFO | ciclo=538 bloques=34 lineas=29 traducciones=2 tiempo=1.6s (ocr=1.4s trad=0.1s)
+2026-10-07 18:03:16,048 | INFO | ciclo=539 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:17,841 | INFO | ciclo=540 bloques=34 lineas=29 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.2s)
+2026-10-07 18:03:19,677 | INFO | ciclo=541 bloques=35 lineas=30 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:21,407 | INFO | ciclo=542 bloques=34 lineas=29 traducciones=2 tiempo=1.6s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:23,232 | INFO | ciclo=543 bloques=34 lineas=28 traducciones=1 tiempo=1.7s (ocr=1.5s trad=0.2s)
+2026-10-07 18:03:25,074 | INFO | ciclo=544 bloques=34 lineas=29 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:03:27,714 | INFO | ciclo=545 bloques=40 lineas=35 traducciones=3 tiempo=2.5s (ocr=2.4s trad=0.1s)
+2026-10-07 18:03:31,007 | INFO | ciclo=546 bloques=44 lineas=39 traducciones=4 tiempo=3.2s (ocr=2.9s trad=0.2s)
+2026-10-07 18:03:34,166 | INFO | ciclo=547 bloques=46 lineas=41 traducciones=3 tiempo=3.1s (ocr=2.9s trad=0.1s)
+2026-10-07 18:03:37,972 | INFO | ciclo=548 bloques=45 lineas=39 traducciones=2 tiempo=3.7s (ocr=3.5s trad=0.2s)
+2026-10-07 18:03:41,609 | INFO | ciclo=549 bloques=45 lineas=39 traducciones=2 tiempo=3.5s (ocr=3.3s trad=0.1s)
+2026-10-07 18:03:45,026 | INFO | ciclo=550 bloques=43 lineas=37 traducciones=1 tiempo=3.3s (ocr=3.1s trad=0.1s)
+2026-10-07 18:03:48,077 | INFO | ciclo=551 bloques=44 lineas=38 traducciones=2 tiempo=2.9s (ocr=2.7s trad=0.2s)
+2026-10-07 18:03:50,314 | INFO | ciclo=552 bloques=44 lineas=38 traducciones=2 tiempo=2.1s (ocr=2.0s trad=0.1s)
+2026-10-07 18:03:54,014 | INFO | ciclo=553 bloques=44 lineas=39 traducciones=4 tiempo=3.6s (ocr=3.4s trad=0.2s)
+2026-10-07 18:03:56,249 | INFO | ciclo=554 bloques=43 lineas=37 traducciones=2 tiempo=2.1s (ocr=2.0s trad=0.1s)
+2026-10-07 18:03:58,358 | INFO | ciclo=555 bloques=50 lineas=37 traducciones=3 tiempo=2.0s (ocr=1.8s trad=0.1s)
+2026-10-07 18:04:00,404 | INFO | ciclo=556 bloques=49 lineas=37 traducciones=2 tiempo=1.9s (ocr=1.8s trad=0.1s)
+2026-10-07 18:04:01,954 | INFO | ciclo=557 bloques=49 lineas=37 traducciones=2 tiempo=1.4s (ocr=1.3s trad=0.1s)
+2026-10-07 18:04:03,724 | INFO | ciclo=558 bloques=49 lineas=37 traducciones=2 tiempo=1.7s (ocr=1.5s trad=0.1s)
+2026-10-07 18:04:05,650 | INFO | ciclo=559 bloques=50 lineas=37 traducciones=2 tiempo=1.8s (ocr=1.7s trad=0.1s)
+2026-10-07 18:04:14,412 | INFO | ciclo=601 bloques=59 lineas=40 traducciones=1 tiempo=2.2s (ocr=2.0s trad=0.1s)
+2026-10-07 18:04:18,763 | INFO | ciclo=602 bloques=51 lineas=47 traducciones=2 tiempo=4.2s (ocr=3.9s trad=0.3s)
+2026-10-07 18:04:23,172 | INFO | ciclo=603 bloques=50 lineas=45 traducciones=2 tiempo=4.3s (ocr=3.8s trad=0.4s)
+2026-10-07 18:04:26,698 | INFO | ciclo=604 bloques=49 lineas=45 traducciones=3 tiempo=3.4s (ocr=3.2s trad=0.1s)
+2026-10-07 18:04:30,761 | INFO | ciclo=605 bloques=50 lineas=46 traducciones=3 tiempo=4.0s (ocr=3.8s trad=0.2s)
+2026-10-07 18:04:34,670 | INFO | ciclo=606 bloques=51 lineas=46 traducciones=2 tiempo=3.8s (ocr=3.6s trad=0.2s)
+2026-10-07 18:04:39,292 | INFO | ciclo=607 bloques=50 lineas=46 traducciones=3 tiempo=4.5s (ocr=4.2s trad=0.2s)
+2026-10-07 18:04:42,573 | INFO | ciclo=608 bloques=51 lineas=47 traducciones=2 tiempo=3.2s (ocr=3.0s trad=0.1s)
+2026-10-07 18:04:47,823 | INFO | ciclo=618 bloques=52 lineas=47 traducciones=2 tiempo=3.7s (ocr=3.4s trad=0.2s)
+2026-10-07 18:04:50,725 | INFO | ciclo=619 bloques=48 lineas=42 traducciones=2 tiempo=2.8s (ocr=2.6s trad=0.2s)
+2026-10-07 18:04:54,975 | INFO | ciclo=620 bloques=49 lineas=44 traducciones=3 tiempo=4.1s (ocr=4.0s trad=0.1s)
+2026-10-07 18:04:58,972 | INFO | ciclo=621 bloques=97 lineas=63 traducciones=3 tiempo=3.9s (ocr=3.6s trad=0.3s)
+2026-10-07 18:05:01,730 | INFO | ciclo=622 bloques=46 lineas=35 traducciones=4 tiempo=2.7s (ocr=2.1s trad=0.5s)
+2026-10-07 18:05:04,514 | INFO | ciclo=623 bloques=49 lineas=37 traducciones=4 tiempo=2.7s (ocr=2.4s trad=0.2s)
+2026-10-07 18:05:06,419 | INFO | ciclo=624 bloques=39 lineas=28 traducciones=4 tiempo=1.8s (ocr=1.5s trad=0.2s)
+2026-10-07 18:05:08,260 | INFO | ciclo=625 bloques=46 lineas=35 traducciones=4 tiempo=1.7s (ocr=1.5s trad=0.2s)
+2026-10-07 18:05:10,966 | INFO | ciclo=626 bloques=46 lineas=35 traducciones=4 tiempo=2.6s (ocr=2.4s trad=0.2s)
+2026-10-07 18:05:14,082 | INFO | ciclo=627 bloques=53 lineas=41 traducciones=3 tiempo=3.0s (ocr=2.8s trad=0.2s)
+2026-10-07 18:05:15,843 | INFO | ciclo=628 bloques=46 lineas=35 traducciones=4 tiempo=1.7s (ocr=1.4s trad=0.2s)
+2026-10-07 18:05:18,262 | INFO | ciclo=629 bloques=47 lineas=35 traducciones=4 tiempo=2.3s (ocr=2.1s trad=0.2s)
+2026-10-07 18:05:20,692 | INFO | ciclo=630 bloques=55 lineas=39 traducciones=3 tiempo=2.3s (ocr=2.1s trad=0.1s)
+2026-10-07 18:05:22,734 | INFO | ciclo=631 bloques=44 lineas=35 traducciones=3 tiempo=1.9s (ocr=1.7s trad=0.1s)
+2026-10-07 18:05:24,413 | INFO | ciclo=632 bloques=44 lineas=35 traducciones=3 tiempo=1.6s (ocr=1.4s trad=0.2s)
+2026-10-07 18:05:27,138 | INFO | ciclo=633 bloques=47 lineas=36 traducciones=3 tiempo=2.6s (ocr=2.4s trad=0.2s)
+2026-10-07 18:05:28,997 | INFO | ciclo=634 bloques=56 lineas=39 traducciones=3 tiempo=1.8s (ocr=1.5s trad=0.2s)
+2026-10-07 18:05:30,632 | INFO | ciclo=635 bloques=40 lineas=34 traducciones=5 tiempo=1.5s (ocr=1.3s trad=0.2s)
+2026-10-07 18:05:32,412 | INFO | ciclo=636 bloques=42 lineas=35 traducciones=5 tiempo=1.7s (ocr=1.5s trad=0.2s)
+2026-10-07 18:05:34,472 | INFO | ciclo=637 bloques=41 lineas=35 traducciones=5 tiempo=2.0s (ocr=1.7s trad=0.2s)
+2026-10-07 18:05:36,467 | INFO | ciclo=638 bloques=56 lineas=40 traducciones=3 tiempo=1.9s (ocr=1.7s trad=0.2s)
+2026-10-07 18:05:39,118 | INFO | ciclo=639 bloques=73 lineas=56 traducciones=1 tiempo=2.6s (ocr=2.3s trad=0.2s)
+2026-10-07 18:05:41,015 | INFO | ciclo=640 bloques=40 lineas=33 traducciones=2 tiempo=1.8s (ocr=1.5s trad=0.3s)
+2026-10-07 18:05:42,607 | INFO | ciclo=641 bloques=40 lineas=33 traducciones=2 tiempo=1.5s (ocr=1.2s trad=0.2s)
+2026-10-07 18:05:44,418 | INFO | ciclo=642 bloques=43 lineas=35 traducciones=2 tiempo=1.7s (ocr=1.4s trad=0.2s)
+2026-10-07 18:05:46,414 | INFO | ciclo=643 bloques=56 lineas=41 traducciones=2 tiempo=1.9s (ocr=1.6s trad=0.2s)
+2026-10-07 18:06:49,454 | INFO | Aplicacion iniciada
+2026-10-07 18:06:49,539 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:06:49,540 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:06:54,904 | INFO | Traductor Argos listo
+2026-10-07 18:06:55,659 | INFO | OCR RapidOCR listo
+2026-10-07 18:07:08,597 | INFO | ciclo=1 bloques=52 lineas=47 parrafos=32 traducciones=6 tiempo=12.9s (ocr=10.9s trad=1.9s)
+2026-10-07 18:07:08,639 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:07:13,978 | INFO | ciclo=2 bloques=23 lineas=23 parrafos=9 traducciones=9 tiempo=5.3s (ocr=3.6s trad=1.6s)
+2026-10-07 18:07:17,124 | INFO | ciclo=3 bloques=22 lineas=22 parrafos=10 traducciones=10 tiempo=3.0s (ocr=2.4s trad=0.6s)
+2026-10-07 18:07:23,567 | INFO | ciclo=31 bloques=22 lineas=22 parrafos=10 traducciones=10 tiempo=2.1s (ocr=2.1s trad=0.0s)
+2026-10-07 18:07:27,732 | INFO | ciclo=32 bloques=23 lineas=23 parrafos=11 traducciones=11 tiempo=4.1s (ocr=3.6s trad=0.4s)
+2026-10-07 18:07:32,749 | INFO | ciclo=33 bloques=23 lineas=23 parrafos=11 traducciones=10 tiempo=4.9s (ocr=3.8s trad=1.0s)
+2026-10-07 18:07:37,562 | INFO | ciclo=34 bloques=24 lineas=24 parrafos=10 traducciones=10 tiempo=4.7s (ocr=3.7s trad=0.9s)
+2026-10-07 18:07:44,613 | INFO | ciclo=51 bloques=25 lineas=25 parrafos=10 traducciones=10 tiempo=4.3s (ocr=3.4s trad=0.9s)
+2026-10-07 18:07:49,707 | INFO | ciclo=52 bloques=23 lineas=23 parrafos=9 traducciones=9 tiempo=5.0s (ocr=3.8s trad=1.1s)
+2026-10-07 18:07:54,125 | INFO | ciclo=53 bloques=51 lineas=47 parrafos=34 traducciones=3 tiempo=4.3s (ocr=3.3s trad=0.9s)
+2026-10-07 18:07:59,929 | INFO | ciclo=76 bloques=51 lineas=47 parrafos=34 traducciones=3 tiempo=2.2s (ocr=1.8s trad=0.3s)
+2026-10-07 18:08:04,126 | INFO | ciclo=77 bloques=44 lineas=43 parrafos=33 traducciones=4 tiempo=4.1s (ocr=3.4s trad=0.7s)
+2026-10-07 18:08:09,306 | INFO | ciclo=78 bloques=43 lineas=42 parrafos=32 traducciones=4 tiempo=5.1s (ocr=3.3s trad=1.8s)
+2026-10-07 18:08:12,206 | INFO | ciclo=79 bloques=42 lineas=42 parrafos=32 traducciones=3 tiempo=2.8s (ocr=2.5s trad=0.3s)
+2026-10-07 18:08:15,636 | INFO | ciclo=80 bloques=42 lineas=42 parrafos=33 traducciones=4 tiempo=3.3s (ocr=2.9s trad=0.4s)
+2026-10-07 18:08:18,363 | INFO | ciclo=81 bloques=43 lineas=42 parrafos=33 traducciones=4 tiempo=2.6s (ocr=2.2s trad=0.3s)
+2026-10-07 18:08:20,515 | INFO | ciclo=82 bloques=42 lineas=41 parrafos=32 traducciones=4 tiempo=2.1s (ocr=1.7s trad=0.3s)
+2026-10-07 18:08:23,085 | INFO | ciclo=85 bloques=43 lineas=42 parrafos=33 traducciones=4 tiempo=2.2s (ocr=1.8s trad=0.3s)
+2026-10-07 18:08:28,348 | INFO | ciclo=88 bloques=43 lineas=43 parrafos=32 traducciones=2 tiempo=4.8s (ocr=3.8s trad=1.0s)
+2026-10-07 18:08:30,522 | INFO | ciclo=89 bloques=21 lineas=21 parrafos=14 traducciones=2 tiempo=2.1s (ocr=1.3s trad=0.7s)
+2026-10-07 18:08:41,374 | INFO | ciclo=131 bloques=44 lineas=44 parrafos=35 traducciones=3 tiempo=4.3s (ocr=3.5s trad=0.7s)
+2026-10-07 18:08:44,560 | INFO | ciclo=132 bloques=44 lineas=43 parrafos=33 traducciones=3 tiempo=3.1s (ocr=2.6s trad=0.4s)
+2026-10-07 18:08:48,281 | INFO | ciclo=133 bloques=43 lineas=42 parrafos=32 traducciones=2 tiempo=3.6s (ocr=3.2s trad=0.4s)
+2026-10-07 18:08:52,094 | INFO | ciclo=134 bloques=44 lineas=43 parrafos=31 traducciones=4 tiempo=3.7s (ocr=3.3s trad=0.4s)
+2026-10-07 18:08:54,636 | INFO | ciclo=135 bloques=43 lineas=42 parrafos=32 traducciones=5 tiempo=2.4s (ocr=2.0s trad=0.4s)
+2026-10-07 18:08:57,070 | INFO | ciclo=137 bloques=44 lineas=43 parrafos=32 traducciones=5 tiempo=2.2s (ocr=1.7s trad=0.4s)
+2026-10-07 18:09:02,263 | INFO | ciclo=138 bloques=26 lineas=26 parrafos=10 traducciones=10 tiempo=5.1s (ocr=3.4s trad=1.6s)
+2026-10-07 18:09:04,764 | INFO | ciclo=139 bloques=43 lineas=42 parrafos=32 traducciones=4 tiempo=2.4s (ocr=2.0s trad=0.4s)
+2026-10-07 18:09:07,801 | INFO | ciclo=140 bloques=35 lineas=34 parrafos=28 traducciones=3 tiempo=2.9s (ocr=2.5s trad=0.3s)
+2026-10-07 18:09:11,423 | INFO | ciclo=141 bloques=46 lineas=38 parrafos=26 traducciones=3 tiempo=3.5s (ocr=2.6s trad=0.9s)
+2026-10-07 18:09:14,332 | INFO | ciclo=142 bloques=33 lineas=33 parrafos=27 traducciones=3 tiempo=2.8s (ocr=2.5s trad=0.2s)
+2026-10-07 18:09:16,860 | INFO | ciclo=143 bloques=36 lineas=34 parrafos=28 traducciones=4 tiempo=2.4s (ocr=2.0s trad=0.4s)
+2026-10-07 18:09:19,779 | INFO | ciclo=144 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=2.8s (ocr=2.4s trad=0.4s)
+2026-10-07 18:09:21,861 | INFO | ciclo=145 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=2.0s (ocr=1.6s trad=0.3s)
+2026-10-07 18:09:23,766 | INFO | ciclo=146 bloques=34 lineas=33 parrafos=26 traducciones=2 tiempo=1.8s (ocr=1.5s trad=0.3s)
+2026-10-07 18:09:25,710 | INFO | ciclo=147 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.4s)
+2026-10-07 18:09:27,701 | INFO | ciclo=148 bloques=35 lineas=34 parrafos=27 traducciones=2 tiempo=1.9s (ocr=1.5s trad=0.4s)
+2026-10-07 18:09:30,270 | INFO | ciclo=149 bloques=35 lineas=34 parrafos=27 traducciones=4 tiempo=2.5s (ocr=2.0s trad=0.4s)
+2026-10-07 18:09:32,066 | INFO | ciclo=150 bloques=35 lineas=34 parrafos=27 traducciones=4 tiempo=1.7s (ocr=1.3s trad=0.4s)
+2026-10-07 18:09:34,009 | INFO | ciclo=151 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.4s)
+2026-10-07 18:09:35,941 | INFO | ciclo=152 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.3s)
+2026-10-07 18:09:37,899 | INFO | ciclo=153 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.9s (ocr=1.4s trad=0.4s)
+2026-10-07 18:09:39,971 | INFO | ciclo=154 bloques=36 lineas=34 parrafos=27 traducciones=2 tiempo=2.0s (ocr=1.6s trad=0.4s)
+2026-10-07 18:09:42,152 | INFO | ciclo=155 bloques=36 lineas=34 parrafos=28 traducciones=4 tiempo=2.1s (ocr=1.7s trad=0.4s)
+2026-10-07 18:09:44,140 | INFO | ciclo=156 bloques=36 lineas=34 parrafos=27 traducciones=3 tiempo=1.9s (ocr=1.6s trad=0.2s)
+2026-10-07 18:09:46,197 | INFO | ciclo=157 bloques=36 lineas=34 parrafos=27 traducciones=2 tiempo=2.0s (ocr=1.5s trad=0.4s)
+2026-10-07 18:09:48,143 | INFO | ciclo=158 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.4s)
+2026-10-07 18:09:50,019 | INFO | ciclo=159 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.3s)
+2026-10-07 18:09:51,967 | INFO | ciclo=160 bloques=34 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.5s trad=0.3s)
+2026-10-07 18:09:53,872 | INFO | ciclo=161 bloques=34 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.4s)
+2026-10-07 18:09:55,808 | INFO | ciclo=162 bloques=34 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.3s)
+2026-10-07 18:09:57,855 | INFO | ciclo=163 bloques=35 lineas=34 parrafos=28 traducciones=4 tiempo=1.9s (ocr=1.5s trad=0.4s)
+2026-10-07 18:09:59,877 | INFO | ciclo=164 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.9s (ocr=1.5s trad=0.3s)
+2026-10-07 18:10:01,815 | INFO | ciclo=165 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.4s)
+2026-10-07 18:10:03,781 | INFO | ciclo=166 bloques=34 lineas=33 parrafos=26 traducciones=2 tiempo=1.9s (ocr=1.6s trad=0.2s)
+2026-10-07 18:10:05,692 | INFO | ciclo=167 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=1.8s (ocr=1.4s trad=0.3s)
+2026-10-07 18:10:07,779 | INFO | ciclo=168 bloques=36 lineas=35 parrafos=28 traducciones=4 tiempo=2.0s (ocr=1.5s trad=0.4s)
+2026-10-07 18:10:10,010 | INFO | ciclo=169 bloques=36 lineas=35 parrafos=28 traducciones=4 tiempo=2.1s (ocr=1.6s trad=0.4s)
+2026-10-07 18:10:12,099 | INFO | ciclo=170 bloques=36 lineas=35 parrafos=28 traducciones=3 tiempo=2.0s (ocr=1.5s trad=0.5s)
+2026-10-07 18:10:14,160 | INFO | ciclo=171 bloques=35 lineas=34 parrafos=27 traducciones=4 tiempo=2.0s (ocr=1.5s trad=0.4s)
+2026-10-07 18:10:16,308 | INFO | ciclo=172 bloques=35 lineas=34 parrafos=27 traducciones=3 tiempo=2.0s (ocr=1.6s trad=0.4s)
+2026-10-07 18:10:18,615 | INFO | ciclo=173 bloques=38 lineas=37 parrafos=29 traducciones=3 tiempo=2.2s (ocr=1.8s trad=0.3s)
+2026-10-07 18:10:22,121 | INFO | ciclo=174 bloques=41 lineas=41 parrafos=33 traducciones=6 tiempo=3.4s (ocr=2.9s trad=0.4s)
+2026-10-07 18:10:24,298 | INFO | ciclo=175 bloques=41 lineas=41 parrafos=33 traducciones=6 tiempo=2.1s (ocr=1.7s trad=0.3s)
+2026-10-07 18:10:26,795 | INFO | ciclo=176 bloques=41 lineas=41 parrafos=33 traducciones=6 tiempo=2.4s (ocr=2.0s trad=0.4s)
+2026-10-07 18:10:30,576 | INFO | ciclo=177 bloques=42 lineas=41 parrafos=32 traducciones=4 tiempo=3.7s (ocr=3.2s trad=0.4s)
+2026-10-07 18:10:34,444 | INFO | ciclo=178 bloques=46 lineas=45 parrafos=35 traducciones=5 tiempo=3.8s (ocr=3.3s trad=0.5s)
+2026-10-07 18:10:37,907 | INFO | ciclo=179 bloques=49 lineas=44 parrafos=31 traducciones=4 tiempo=3.4s (ocr=2.6s trad=0.8s)
+2026-10-07 18:10:40,833 | INFO | ciclo=180 bloques=29 lineas=29 parrafos=20 traducciones=5 tiempo=2.8s (ocr=2.0s trad=0.7s)
+2026-10-07 18:10:44,383 | INFO | ciclo=181 bloques=44 lineas=43 parrafos=32 traducciones=4 tiempo=3.4s (ocr=2.9s trad=0.5s)
+2026-10-07 18:10:47,371 | INFO | ciclo=182 bloques=43 lineas=42 parrafos=31 traducciones=3 tiempo=2.9s (ocr=2.4s trad=0.4s)
+2026-10-07 18:10:51,025 | INFO | ciclo=183 bloques=43 lineas=43 parrafos=32 traducciones=3 tiempo=3.6s (ocr=3.1s trad=0.4s)
+2026-10-07 18:10:53,480 | INFO | ciclo=184 bloques=43 lineas=42 parrafos=31 traducciones=3 tiempo=2.4s (ocr=1.9s trad=0.4s)
+2026-10-07 18:14:53,818 | INFO | Aplicacion iniciada
+2026-10-07 18:14:53,913 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:14:53,914 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:15:00,767 | INFO | Traductor Argos listo
+2026-10-07 18:15:05,079 | INFO | OCR RapidOCR listo
+2026-10-07 18:15:18,836 | INFO | ciclo=1 bloques=27 lineas=27 parrafos=13 traducciones=12 tiempo=13.3s (ocr=11.3s trad=2.0s)
+2026-10-07 18:15:18,837 | INFO | ciclo=1 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:15:36,136 | INFO | ciclo=2 bloques=115 lineas=74 parrafos=28 traducciones=17 tiempo=17.1s (ocr=15.2s trad=1.8s)
+2026-10-07 18:15:36,136 | INFO | ciclo=2 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:15:50,770 | INFO | ciclo=3 bloques=43 lineas=32 parrafos=17 traducciones=2 tiempo=14.4s (ocr=13.7s trad=0.7s)
+2026-10-07 18:15:50,771 | INFO | ciclo=3 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:16:16,530 | INFO | ciclo=4 bloques=54 lineas=40 parrafos=20 traducciones=5 tiempo=25.6s (ocr=24.0s trad=1.5s)
+2026-10-07 18:16:16,530 | INFO | ciclo=4 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:16:21,778 | INFO | ciclo=5 bloques=27 lineas=27 parrafos=10 traducciones=9 tiempo=5.0s (ocr=4.0s trad=1.1s)
+2026-10-07 18:16:21,778 | INFO | ciclo=5 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:16:26,354 | INFO | ciclo=6 bloques=25 lineas=25 parrafos=11 traducciones=10 tiempo=4.4s (ocr=3.1s trad=1.2s)
+2026-10-07 18:16:26,354 | INFO | ciclo=6 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:17:03,992 | INFO | ciclo=7 bloques=67 lineas=46 parrafos=20 traducciones=5 tiempo=37.3s (ocr=34.3s trad=2.9s)
+2026-10-07 18:17:03,992 | INFO | ciclo=7 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:17:27,982 | INFO | ciclo=8 bloques=44 lineas=41 parrafos=35 traducciones=7 tiempo=23.4s (ocr=19.4s trad=4.0s)
+2026-10-07 18:17:27,982 | INFO | ciclo=8 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:17:43,256 | INFO | Aplicacion iniciada
+2026-10-07 18:17:43,335 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:17:43,335 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:17:52,052 | INFO | Traductor Argos listo
+2026-10-07 18:17:55,990 | INFO | OCR RapidOCR listo
+2026-10-07 18:18:09,622 | INFO | ciclo=1 bloques=26 lineas=26 parrafos=14 traducciones=13 tiempo=13.3s (ocr=12.1s trad=1.2s)
+2026-10-07 18:18:09,623 | INFO | ciclo=1 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:18:24,535 | INFO | ciclo=2 bloques=37 lineas=29 parrafos=15 traducciones=3 tiempo=14.7s (ocr=11.3s trad=3.4s)
+2026-10-07 18:18:24,536 | INFO | ciclo=2 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:18:44,965 | INFO | ciclo=3 bloques=52 lineas=45 parrafos=37 traducciones=4 tiempo=20.2s (ocr=19.0s trad=1.2s)
+2026-10-07 18:18:44,965 | INFO | ciclo=3 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:18:55,270 | INFO | Aplicacion iniciada
+2026-10-07 18:18:55,358 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:18:55,358 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:19:00,890 | INFO | Traductor Argos listo
+2026-10-07 18:19:01,663 | INFO | OCR RapidOCR listo
+2026-10-07 18:19:10,704 | INFO | ciclo=1 bloques=77 lineas=67 parrafos=29 traducciones=11 tiempo=8.8s (ocr=7.4s trad=1.5s)
+2026-10-07 18:19:10,704 | INFO | ciclo=1 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:19:15,848 | INFO | ciclo=2 bloques=35 lineas=31 parrafos=14 traducciones=4 tiempo=4.9s (ocr=4.0s trad=0.9s)
+2026-10-07 18:19:15,848 | INFO | ciclo=2 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:20:47,221 | INFO | Aplicacion iniciada
+2026-10-07 18:20:47,297 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:20:47,297 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:20:54,530 | INFO | Traductor Argos listo
+2026-10-07 18:20:55,145 | INFO | OCR RapidOCR listo
+2026-10-07 18:21:10,710 | INFO | ciclo=1 bloques=36 lineas=31 parrafos=18 traducciones=7 tiempo=15.3s (ocr=11.4s trad=3.9s)
+2026-10-07 18:21:10,710 | INFO | ciclo=1 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:21:15,130 | INFO | ciclo=2 bloques=24 lineas=23 parrafos=8 traducciones=7 tiempo=4.2s (ocr=3.3s trad=0.9s)
+2026-10-07 18:21:15,130 | INFO | ciclo=2 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:21:18,885 | INFO | Configuración guardada desde la ventana
+2026-10-07 18:21:21,207 | INFO | ciclo=3 bloques=32 lineas=30 parrafos=11 traducciones=6 tiempo=5.9s (ocr=3.6s trad=2.3s)
+2026-10-07 18:21:21,208 | INFO | ciclo=3 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:21:23,821 | INFO | ciclo=4 bloques=23 lineas=23 parrafos=9 traducciones=7 tiempo=2.3s (ocr=2.2s trad=0.1s)
+2026-10-07 18:21:23,821 | INFO | ciclo=4 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:21:37,076 | INFO | ciclo=5 bloques=68 lineas=52 parrafos=28 traducciones=11 tiempo=12.9s (ocr=9.1s trad=3.8s)
+2026-10-07 18:21:37,076 | INFO | ciclo=5 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:22:06,939 | INFO | ciclo=6 bloques=48 lineas=48 parrafos=37 traducciones=5 tiempo=29.6s (ocr=25.4s trad=4.2s)
+2026-10-07 18:22:06,940 | INFO | ciclo=6 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:22:35,728 | INFO | ciclo=7 bloques=49 lineas=49 parrafos=40 traducciones=4 tiempo=28.4s (ocr=24.8s trad=3.6s)
+2026-10-07 18:22:35,728 | INFO | ciclo=7 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:23:04,095 | INFO | ciclo=8 bloques=49 lineas=49 parrafos=39 traducciones=4 tiempo=27.7s (ocr=25.6s trad=2.1s)
+2026-10-07 18:23:04,095 | INFO | ciclo=8 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:23:12,254 | INFO | Aplicacion iniciada
+2026-10-07 18:23:12,332 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:23:12,332 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:23:17,869 | INFO | Traductor Argos listo
+2026-10-07 18:23:18,493 | INFO | OCR RapidOCR listo
+2026-10-07 18:23:29,397 | INFO | ciclo=1 bloques=35 lineas=30 parrafos=20 traducciones=3 tiempo=10.7s (ocr=9.8s trad=0.8s)
+2026-10-07 18:23:29,398 | INFO | ciclo=1 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:23:41,380 | INFO | ciclo=2 bloques=38 lineas=31 parrafos=15 traducciones=4 tiempo=11.8s (ocr=8.9s trad=2.9s)
+2026-10-07 18:23:41,381 | INFO | ciclo=2 descartado: la pantalla cambió durante el proceso
+2026-10-07 18:24:41,205 | INFO | Aplicacion iniciada
+2026-10-07 18:24:41,284 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:24:41,284 | INFO | Overlay creado 1920x1020 en 0,0
+2026-10-07 18:24:45,702 | INFO | Traductor Argos listo
+2026-10-07 18:24:46,329 | INFO | OCR RapidOCR listo
+2026-10-07 18:25:02,082 | INFO | ciclo=1 bloques=48 lineas=43 parrafos=31 traducciones=5 tiempo=15.5s (ocr=14.0s trad=1.4s)
+2026-10-07 18:25:02,116 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:25:12,905 | INFO | ciclo=2 bloques=44 lineas=34 parrafos=18 traducciones=3 tiempo=10.5s (ocr=9.8s trad=0.7s)
+2026-10-07 18:25:12,964 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:25:25,517 | INFO | ciclo=3 bloques=44 lineas=33 parrafos=18 traducciones=3 tiempo=12.2s (ocr=9.4s trad=2.8s)
+2026-10-07 18:25:25,596 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:25:30,875 | INFO | ciclo=4 bloques=24 lineas=24 parrafos=11 traducciones=10 tiempo=5.0s (ocr=3.7s trad=1.3s)
+2026-10-07 18:25:44,571 | INFO | ciclo=5 bloques=52 lineas=38 parrafos=20 traducciones=4 tiempo=6.8s (ocr=6.3s trad=0.4s)
+2026-10-07 18:25:44,591 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:26:02,362 | INFO | ciclo=6 bloques=67 lineas=53 parrafos=33 traducciones=2 tiempo=17.4s (ocr=15.4s trad=2.0s)
+2026-10-07 18:26:02,399 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:26:29,425 | INFO | ciclo=7 bloques=50 lineas=50 parrafos=36 traducciones=4 tiempo=26.5s (ocr=22.8s trad=3.7s)
+2026-10-07 18:26:29,445 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:26:56,359 | INFO | ciclo=8 bloques=52 lineas=52 parrafos=38 traducciones=4 tiempo=26.4s (ocr=23.6s trad=2.8s)
+2026-10-07 18:26:56,397 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:27:11,814 | INFO | ciclo=9 bloques=51 lineas=48 parrafos=37 traducciones=4 tiempo=15.1s (ocr=12.6s trad=2.5s)
+2026-10-07 18:27:11,879 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:27:30,861 | INFO | ciclo=10 bloques=122 lineas=85 parrafos=34 traducciones=23 tiempo=18.7s (ocr=10.1s trad=8.6s)
+2026-10-07 18:27:30,895 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:28:04,841 | INFO | ciclo=11 bloques=93 lineas=71 parrafos=44 traducciones=15 tiempo=33.6s (ocr=28.7s trad=4.9s)
+2026-10-07 18:28:04,870 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:28:13,843 | INFO | ciclo=12 bloques=25 lineas=25 parrafos=10 traducciones=7 tiempo=8.6s (ocr=3.8s trad=4.9s)
+2026-10-07 18:28:13,888 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:28:27,428 | INFO | ciclo=13 bloques=75 lineas=49 parrafos=27 traducciones=2 tiempo=13.1s (ocr=10.9s trad=2.2s)
+2026-10-07 18:28:27,467 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:28:47,860 | INFO | ciclo=14 bloques=113 lineas=81 parrafos=36 traducciones=24 tiempo=20.1s (ocr=18.0s trad=2.1s)
+2026-10-07 18:28:47,931 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:29:17,577 | INFO | ciclo=15 bloques=72 lineas=44 parrafos=22 traducciones=3 tiempo=29.4s (ocr=26.9s trad=2.5s)
+2026-10-07 18:29:17,610 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:29:22,218 | INFO | ciclo=16 bloques=27 lineas=27 parrafos=10 traducciones=9 tiempo=4.3s (ocr=3.4s trad=0.9s)
+2026-10-07 18:29:48,531 | INFO | ciclo=17 bloques=28 lineas=28 parrafos=11 traducciones=10 tiempo=21.7s (ocr=17.8s trad=3.9s)
+2026-10-07 18:29:48,557 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:29:53,246 | INFO | ciclo=18 bloques=48 lineas=48 parrafos=38 traducciones=3 tiempo=4.2s (ocr=3.6s trad=0.5s)
+2026-10-07 18:30:22,290 | INFO | ciclo=19 bloques=26 lineas=26 parrafos=12 traducciones=11 tiempo=28.5s (ocr=23.5s trad=5.0s)
+2026-10-07 18:30:22,304 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:30:31,876 | INFO | ciclo=20 bloques=89 lineas=64 parrafos=38 traducciones=3 tiempo=9.3s (ocr=8.4s trad=0.8s)
+2026-10-07 18:30:31,895 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:30:37,596 | INFO | ciclo=21 bloques=71 lineas=44 parrafos=23 traducciones=3 tiempo=5.4s (ocr=4.7s trad=0.6s)
+2026-10-07 18:31:04,909 | INFO | ciclo=22 bloques=68 lineas=43 parrafos=22 traducciones=2 tiempo=27.0s (ocr=24.5s trad=2.5s)
+2026-10-07 18:31:04,957 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:31:38,242 | INFO | ciclo=23 bloques=116 lineas=89 parrafos=19 traducciones=10 tiempo=32.8s (ocr=28.5s trad=4.3s)
+2026-10-07 18:31:38,312 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:31:41,902 | INFO | ciclo=24 bloques=50 lineas=43 parrafos=34 traducciones=4 tiempo=3.3s (ocr=2.9s trad=0.4s)
+2026-10-07 18:31:41,954 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:31:57,650 | INFO | ciclo=25 bloques=70 lineas=42 parrafos=24 traducciones=4 tiempo=15.4s (ocr=13.4s trad=2.0s)
+2026-10-07 18:31:57,690 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:32:15,885 | INFO | ciclo=26 bloques=67 lineas=42 parrafos=23 traducciones=4 tiempo=17.9s (ocr=15.5s trad=2.4s)
+2026-10-07 18:32:15,955 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:32:21,174 | INFO | ciclo=27 bloques=26 lineas=26 parrafos=11 traducciones=10 tiempo=5.0s (ocr=3.6s trad=1.4s)
+2026-10-07 18:32:40,292 | INFO | ciclo=28 bloques=24 lineas=24 parrafos=12 traducciones=10 tiempo=5.4s (ocr=4.6s trad=0.8s)
+2026-10-07 18:32:40,363 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:32:50,240 | INFO | ciclo=29 bloques=63 lineas=38 parrafos=21 traducciones=1 tiempo=9.6s (ocr=7.9s trad=1.7s)
+2026-10-07 18:32:50,262 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:33:01,269 | INFO | ciclo=30 bloques=52 lineas=52 parrafos=38 traducciones=4 tiempo=10.7s (ocr=8.7s trad=2.0s)
+2026-10-07 18:33:01,316 | INFO | Overlay excluido de la captura de pantalla
+2026-10-07 18:33:34,310 | INFO | ciclo=31 bloques=114 lineas=80 parrafos=25 traducciones=15 tiempo=32.7s (ocr=23.9s trad=8.8s)
+2026-10-07 18:33:34,363 | INFO | Overlay excluido de la captura de pantalla
